@@ -23,7 +23,7 @@ struct User {
 }
 
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController{
 
     @IBOutlet weak var emailtextfield: UITextField!
     
@@ -39,6 +39,8 @@ class SignUpViewController: UIViewController {
         
     }
     
+
+    
     private func handleAuthToFirebase(){
         
         guard let email = emailtextfield.text else { return  }
@@ -53,10 +55,12 @@ class SignUpViewController: UIViewController {
 
             self.adduserinfotofirestore(email: email)
 
+           
         }
-    }
+}
 
-    private func adduserinfotofirestore(email: String){
+    
+private func adduserinfotofirestore(email: String){
 
         guard let uid = Auth.auth().currentUser?.uid else { return }
         guard let name = self.nicknametextfield.text else { return }
@@ -92,12 +96,12 @@ class SignUpViewController: UIViewController {
                 print("ユーザ情報の取得に成功しました\(user.name)")
 
             }
-
-
         }
 
+}
+}
 
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,16 +133,16 @@ class SignUpViewController: UIViewController {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {self.view.transform = transform})
     }
     
-        func hidekeyboard(){
+    @objc func hidekeyboard(){
         
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {self.view.transform = .identity})
         
     }
     
    
+
 }
-    
-}
+
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
@@ -146,7 +150,7 @@ extension SignUpViewController: UITextFieldDelegate {
         let passwordIsEmpty = emailtextfield.text?.isEmpty ?? true
         let nicknameIsEmpty = emailtextfield.text?.isEmpty ?? true
         
-        if emailIsEmpty || passwordIsEmpty || nicknameIsEmpty{registerbutton.isEnabled = false
+        if emailIsEmpty || passwordIsEmpty || nicknameIsEmpty{ registerbutton.isEnabled = false
             registerbutton.backgroundColor = UIColor.rgb(red: 255, green: 221, blue: 187)
         } else {
             registerbutton.isEnabled = true
@@ -156,4 +160,5 @@ extension SignUpViewController: UITextFieldDelegate {
         }
         
     }
+
 
