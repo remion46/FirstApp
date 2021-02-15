@@ -34,12 +34,8 @@ class SignUpViewController: UIViewController{
     @IBOutlet weak var registerbutton: UIButton!
     
     @IBAction func tappedregister(_ sender: Any) {
-        
         handleAuthToFirebase()
-        
     }
-    
-
     
     private func handleAuthToFirebase(){
         
@@ -48,65 +44,52 @@ class SignUpViewController: UIViewController{
         
         Auth.auth().createUser(withEmail: email, password: password) { (ress, err) in
             if let err = err {
-                
                 print("認証情報の保存に失敗しました\(err)")
                 return
             }
-
             self.adduserinfotofirestore(email: email)
-
-           
         }
-}
+    }
 
-    
-private func adduserinfotofirestore(email: String){
 
+    private func adduserinfotofirestore(email: String){
         guard let uid = Auth.auth().currentUser?.uid else { return }
         guard let name = self.nicknametextfield.text else { return }
 
         let docdata = ["email": email,"name": name ,"createdAt": Timestamp()] as [String : Any ]
         let userref = Firestore.firestore().collection("users").document(uid)
 
-        userref.setData(docdata) { (err) in
-            if let err = err {
-
-                print("Firestoreの保存に失敗しました\(err)")
-                return
-            }
-            print("Firestoreの保存に成功しました")
-
-            let docdata = ["email": email,"name": name ,"createdAt": Timestamp()] as [String : Any ]
-            Firestore.firestore().collection("users").document(uid).setData(docdata) { (err) in
-            userref.getDocument { (snapshot, err) in
+            
+            userref.setData(docdata) { (err) in
                 if let err = err {
-
                     print("Firestoreの保存に失敗しました\(err)")
-                    print("ユーザ情報の取得に失敗しました\(err)")
                     return
                 }
+                print("Firestoreの保存に成功しました")
+                
+                userref.getDocument { (snapshot, err) in
+                    if let err = err {
+                        print("ユーザ情報の取得に失敗しました\(err)")
+                        
+                    }
 
-            print("Firestoreの保存に成功しました")
-            return
+                
+                    guard let data = snapshot?.data() else { return }
 
-                guard let data = snapshot?.data() else { return }
+                    let user = User.init(dic: data)
 
-                let user = User.init(dic: data)
+                    print("ユーザ情報の取得に成功しました\(user.name)")
+                    
+                
 
-                print("ユーザ情報の取得に成功しました\(user.name)")
-
-            }
+                }
         }
-
-}
-}
-
-
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         registerbutton.isEnabled = false
-        registerbutton.backgroundColor = UIColor.rgb(red: 255, green: 221, blue: 187)
+        registerbutton.backgroundColor = UIColor.rgb(red: 204, green: 204, blue: 204)
         emailtextfield.delegate = self
         passwordtextfield.delegate = self
         nicknametextfield.delegate = self
@@ -151,14 +134,12 @@ extension SignUpViewController: UITextFieldDelegate {
         let nicknameIsEmpty = emailtextfield.text?.isEmpty ?? true
         
         if emailIsEmpty || passwordIsEmpty || nicknameIsEmpty{ registerbutton.isEnabled = false
-            registerbutton.backgroundColor = UIColor.rgb(red: 255, green: 221, blue: 187)
+            registerbutton.backgroundColor = UIColor.rgb(red: 204, green: 204, blue: 204)
         } else {
             registerbutton.isEnabled = true
-            registerbutton.backgroundColor = UIColor.rgb(red: 255, green: 221, blue: 0)
+            registerbutton.backgroundColor = UIColor.rgb(red: 135, green: 206, blue: 235)
         }
             
         }
         
     }
-
-
