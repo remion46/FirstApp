@@ -268,11 +268,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ocL-wS-jW0">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="213" id="ocL-wS-jW0">
+                                <rect key="frame" x="0.0" y="28" width="414" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ocL-wS-jW0" id="ZKC-pZ-ScI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -293,26 +293,29 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HMh-rQ-Ng4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1606" y="591"/>
+            <point key="canvasLocation" x="1605.7971014492755" y="590.625"/>
         </scene>
         <!--Allquestion View Controller-->
         <scene sceneID="L50-29-gb9">
             <objects>
                 <viewController id="yrp-Ph-Yb5" customClass="AllquestionViewController" customModule="Firstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cxG-mT-mTo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="z0g-KQ-Sar">
-                                <rect key="frame" x="20" y="108" width="374" height="685"/>
+                                <rect key="frame" x="20" y="20" width="374" height="768"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obY-BV-s3z">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="342.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="384"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="みんなに質問"/>
+                                        <connections>
+                                            <segue destination="KzB-PM-ZzP" kind="show" id="hOE-KX-Mjc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-2p-8VE">
-                                        <rect key="frame" x="0.0" y="342.5" width="374" height="342.5"/>
+                                        <rect key="frame" x="0.0" y="384" width="374" height="384"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <state key="normal" title="個別に質問"/>
                                     </button>
@@ -340,6 +343,64 @@
             </objects>
             <point key="canvasLocation" x="1605.7971014492755" y="1391.5178571428571"/>
         </scene>
+        <!--Everyonequestion View Controller-->
+        <scene sceneID="uK9-Ub-4Wj">
+            <objects>
+                <viewController id="KzB-PM-ZzP" customClass="EveryonequestionViewController" customModule="Firstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k33-vE-yG5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="質問内容" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-E9-yNm">
+                                <rect key="frame" x="0.0" y="138" width="414" height="556"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZL-vj-5yg">
+                                <rect key="frame" x="57" y="702" width="300" height="48"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="NQj-MV-kKw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="投稿する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="post:" destination="KzB-PM-ZzP" eventType="touchUpInside" id="s1T-c2-BtN"/>
+                                    <action selector="tappedregister:" destination="6Mq-Xl-19S" eventType="touchUpInside" id="7i1-S4-Lj4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-lJ-liv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jQe-fn-oRg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hds-lH-gDB"/>
+                    <connections>
+                        <outlet property="postbutton" destination="RZL-vj-5yg" id="pYt-Y8-Sjd"/>
+                        <outlet property="questionfield" destination="bYk-E9-yNm" id="SA1-Yo-WS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxF-vB-sMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605.7971014492755" y="2208.4821428571427"/>
+        </scene>
         <!--Item-->
         <scene sceneID="XVg-6a-zfk">
             <objects>
@@ -359,9 +420,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oVD-9f-P8u"/>
+        <segue reference="UKK-2Y-C4K"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

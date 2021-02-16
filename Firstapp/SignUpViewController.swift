@@ -81,7 +81,6 @@ class SignUpViewController: UIViewController{
                     print("ユーザ情報の取得に成功しました\(user.name)")
                     
                 
-
                 }
         }
     }

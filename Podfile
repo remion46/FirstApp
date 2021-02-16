@@ -9,6 +9,8 @@ target 'Firstapp' do
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'TaggerKit'
+pod 'EmptyStateKit'
 
   target 'FirstappTests' do
     inherit! :search_paths
