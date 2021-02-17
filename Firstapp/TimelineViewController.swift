@@ -14,16 +14,21 @@ class TimelineViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    override func viewDidAppear(_ animated: Bool) {
+            let defaults = UserDefaults.standard
+            defaults.register(defaults: ["FirstLaunch" : true])
+            if defaults.bool(forKey: "FirstLaunch") == true {
+                UserDefaults.standard.set(false, forKey: "FirstLaunch")
+                let new_uuid = NSUUID().uuidString
+                UserDefaults.standard.set(new_uuid, forKey: "uuid")
+                 print("new!! \n \(new_uuid) \n\n")
+                print("初回の起動です")
+                let TimelineViewController = self.storyboard?.instantiateViewController(withIdentifier: "ログイン画面のstoryboardのidentifier") as! TimelineViewController
+            self.present(TimelineViewController, animated: true, completion: nil)
+            }else{
+                UserDefaults.standard.set(false, forKey: "FirstLaunch")
+                print("２回目以降の起動です")
+            }
+        }
 
 }

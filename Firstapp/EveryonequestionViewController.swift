@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 struct Question {
 
@@ -27,62 +28,26 @@ class EveryonequestionViewController: UIViewController, UITextViewDelegate{
     
     @IBOutlet weak var questionfield: UITextView!
     
-    var defaultstore:Firestore!
-        var handle:Auth?
-    
     @IBAction func post(_ sender: Any) {
         
-        handleAuthToFirebasequestion()
-    }
-    
-    private func handleAuthToFirebasequestion(){
-        
-        guard let question = questionfield.text else { return  }
-
-        
-        Auth.auth().
+        let db = Firestore.firestore()
+        let uuid = (UserDefaults.standard.object(forKey: "uuid"))!
+        var ref: DocumentReference? = nil
+        ref = db.collection("tweets").document()
+        let submit_data = [
+            "user_id": uuid ,
+            "created_at": Date(),
+            "content": "ここに質問内容"
+        ] as [String : Any]
+        ref?.setData(submit_data){ err in
             if let err = err {
-                print("認証情報の保存に失敗しました\(err)")
-                return
+                print("Error adding document: \(err)")
+            } else {
+                print("保存に成功しました！");
             }
-            self.addquestioninfotofirestore(quetion: question)
-        }
-    
-    
-    private func addquestioninfotofirestore(question: String){
-        guard let qid = Auth.auth().currentUser?.uid else { return }
-        guard let question = self.questionfield.text else { return }
-
-        let docdata = ["name": name ,"question": question,"createdAt": Timestamp()] as [String : Any ]
-        let questionrref = Firestore.firestore().collection("users").document(qid)
-
-            
-            questionref.setData(docdata) { (err) in
-                if let err = err {
-                    print("Firestoreの保存に失敗しました\(err)")
-                    return
-                }
-                print("Firestoreの保存に成功しました")
-                
-                questionref.getDocument { (snapshot, err) in
-                    if let err = err {
-                        print("ユーザ情報の取得に失敗しました\(err)")
-                        
-                    }
-
-                
-                    guard let data = snapshot?.data() else { return }
-
-                    let question = Question.init(dic: data)
-
-                    print("ユーザ情報の取得に成功しました\(user.name)")
-                    
-                
-                }
         }
     }
     
-   
     
     
     
@@ -94,7 +59,6 @@ class EveryonequestionViewController: UIViewController, UITextViewDelegate{
         postbutton.backgroundColor = UIColor.rgb(red: 204, green: 204, blue: 204)
         questionfield.delegate = self
         
-        defaultstore = Firestore.firestore()
 
     }
     
