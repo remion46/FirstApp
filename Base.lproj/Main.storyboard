@@ -198,6 +198,21 @@
             </objects>
             <point key="canvasLocation" x="8614.4927536231899" y="590.625"/>
         </scene>
+        <!--Message View Controller-->
+        <scene sceneID="5mt-vp-FSt">
+            <objects>
+                <viewController id="9gs-0y-apL" customClass="MessageViewController" customModule="Firstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wxi-XQ-PZa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BfR-Yy-Wur"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJY-I9-wut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6617" y="1600"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="qpd-rP-hUi">
             <objects>
@@ -468,7 +483,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="UWM-9R-kbl"/>
-        <segue reference="gbq-vM-cik"/>
+        <segue reference="9ty-3y-RcQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">

@@ -9,12 +9,12 @@ import UIKit
 import Firebase
 
 struct User {
-
+    
     let name: String
     let createdAt: Timestamp
     let email: String
-
-
+    
+    
     init(dic: [String: Any]) {
         self.name = dic["name"] as! String
         self.createdAt = dic["createdAt"] as! Timestamp
@@ -24,7 +24,7 @@ struct User {
 
 
 class SignUpViewController: UIViewController{
-
+    
     @IBOutlet weak var emailtextfield: UITextField!
     
     @IBOutlet weak var passwordtextfield: UITextField!
@@ -50,41 +50,41 @@ class SignUpViewController: UIViewController{
             self.adduserinfotofirestore(email: email)
         }
     }
-
-
+    
+    
     private func adduserinfotofirestore(email: String){
         guard let uid = Auth.auth().currentUser?.uid else { return }
         guard let name = self.nicknametextfield.text else { return }
-
+        
         let docdata = ["email": email,"name": name ,"createdAt": Timestamp()] as [String : Any ]
         let userref = Firestore.firestore().collection("users").document(uid)
-
+        
+        
+        userref.setData(docdata) { (err) in
+            if let err = err {
+                print("Firestoreの保存に失敗しました\(err)")
+                return
+            }
+            print("Firestoreの保存に成功しました")
             
-            userref.setData(docdata) { (err) in
+            userref.getDocument { (snapshot, err) in
                 if let err = err {
-                    print("Firestoreの保存に失敗しました\(err)")
-                    return
-                }
-                print("Firestoreの保存に成功しました")
-                
-                userref.getDocument { (snapshot, err) in
-                    if let err = err {
-                        print("ユーザ情報の取得に失敗しました\(err)")
-                        
-                    }
-
-                
-                    guard let data = snapshot?.data() else { return }
-
-                    let user = User.init(dic: data)
-
-                    print("ユーザ情報の取得に成功しました\(user.name)")
+                    print("ユーザ情報の取得に失敗しました\(err)")
                     
-                
                 }
+                
+                
+                guard let data = snapshot?.data() else { return }
+                
+                let user = User.init(dic: data)
+                
+                print("ユーザ情報の取得に成功しました\(user.name)")
+                
+                
+            }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerbutton.isEnabled = false
@@ -121,8 +121,8 @@ class SignUpViewController: UIViewController{
         
     }
     
-   
-
+    
+    
 }
 
 extension SignUpViewController: UITextFieldDelegate {
@@ -138,7 +138,7 @@ extension SignUpViewController: UITextFieldDelegate {
             registerbutton.isEnabled = true
             registerbutton.backgroundColor = UIColor.rgb(red: 135, green: 206, blue: 235)
         }
-            
-        }
         
     }
+    
+}
