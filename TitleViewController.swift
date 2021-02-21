@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TitleViewController: UIViewController {
     
     
     override func viewDidLoad() {
