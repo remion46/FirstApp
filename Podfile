@@ -11,6 +11,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'TaggerKit'
 pod 'EmptyStateKit'
+pod 'Firebase/AdMob'
+pod 'MessageKit'
 
   target 'FirstappTests' do
     inherit! :search_paths

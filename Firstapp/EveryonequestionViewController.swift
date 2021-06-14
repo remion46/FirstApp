@@ -12,14 +12,16 @@ import FirebaseFirestore
 struct Question {
 
     let name: String
-    let createdAt: Timestamp
-    let question: String
+    let uuid: String
+    let created_at: Timestamp
+    let content: String
 
 
     init(dic: [String: Any]) {
         self.name = dic["name"] as! String
-        self.createdAt = dic["createdAt"] as! Timestamp
-        self.question = dic ["question"] as! String
+        self.uuid = dic["uuid"] as! String
+        self.created_at = dic["createdAt"] as! Timestamp
+        self.content = dic ["question"] as! String
     }
 }
 
@@ -29,27 +31,30 @@ class EveryonequestionViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var questionfield: UITextView!
     
     @IBAction func post(_ sender: Any) {
-        
         let db = Firestore.firestore()
         let uuid = (UserDefaults.standard.object(forKey: "uuid"))!
+        //setは登録するだけなので（データの書き込み）
+        UserDefaults.standard.set("ユーザー１", forKey: "userName")
+        //これでuserNameというキーでユーザー１という値が保存されました。なので読み込みます
+        //読み込むときは　UserDefaults.standard.object(forkey: "キーの名前")なので。。
+        let name:String = (UserDefaults.standard.object(forKey: "userName")) as! String
+       //これでnameという変数には先ほどの ユーザー１　という名前が変数として保存されています
         var ref: DocumentReference? = nil
-        ref = db.collection("tweets").document()
+        ref = db.collection("questions").document()
         let submit_data = [
-            "user_id": uuid ,
-            "created_at": Date(),
-            "content": "ここに質問内容"
+          "user_id": uuid ,
+          "name": name ,
+          "created_at": Date(),
+          "content": "質問"
         ] as [String : Any]
         ref?.setData(submit_data){ err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("保存に成功しました！");
-            }
+          if let err = err {
+            print("Error adding document: \(err)")
+          } else {
+            print("保存に成功しました！");
+    }
         }
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,8 +63,6 @@ class EveryonequestionViewController: UIViewController, UITextViewDelegate{
         postbutton.isEnabled = false
         postbutton.backgroundColor = UIColor.rgb(red: 204, green: 204, blue: 204)
         questionfield.delegate = self
-        
-
     }
     
 }

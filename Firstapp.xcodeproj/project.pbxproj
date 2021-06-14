@@ -23,6 +23,8 @@
 		5F735FC325DAC4E7000E8CFD /* AllquestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F735FC225DAC4E7000E8CFD /* AllquestionViewController.swift */; };
 		5F735FE325DB9B75000E8CFD /* EveryonequestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F735FE225DB9B75000E8CFD /* EveryonequestionViewController.swift */; };
 		5F735FE825DC142B000E8CFD /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F735FE725DC142B000E8CFD /* TimelineViewController.swift */; };
+		5F73600A25E1FBD4000E8CFD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73600925E1FBD3000E8CFD /* MessageViewController.swift */; };
+		5F73603725E25036000E8CFD /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73603625E25036000E8CFD /* MockMessage.swift */; };
 		99B37BC1A0345C37A8FD52CC /* Pods_FirstappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC1D0B2A71F11C9938A5FE7 /* Pods_FirstappTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		5F735FC225DAC4E7000E8CFD /* AllquestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllquestionViewController.swift; sourceTree = "<group>"; };
 		5F735FE225DB9B75000E8CFD /* EveryonequestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveryonequestionViewController.swift; sourceTree = "<group>"; };
 		5F735FE725DC142B000E8CFD /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		5F73600925E1FBD3000E8CFD /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		5F73603625E25036000E8CFD /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		DF51BB5684F4B708AB03014C /* Pods-FirstappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstappTests.release.xcconfig"; path = "Target Support Files/Pods-FirstappTests/Pods-FirstappTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA828CD86E5886289733DC30 /* Pods_Firstapp_FirstappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firstapp_FirstappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +135,8 @@
 				5F33BF6925D80091005689A9 /* AppDelegate.swift */,
 				5F33BF6B25D80091005689A9 /* SceneDelegate.swift */,
 				5F33BF6F25D80091005689A9 /* Main.storyboard */,
+				5F73600925E1FBD3000E8CFD /* MessageViewController.swift */,
+				5F73603625E25036000E8CFD /* MockMessage.swift */,
 				5F735FE725DC142B000E8CFD /* TimelineViewController.swift */,
 				5F735FE225DB9B75000E8CFD /* EveryonequestionViewController.swift */,
 				5F735FC225DAC4E7000E8CFD /* AllquestionViewController.swift */,
@@ -426,6 +432,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F33BF6A25D80091005689A9 /* AppDelegate.swift in Sources */,
+				5F73603725E25036000E8CFD /* MockMessage.swift in Sources */,
+				5F73600A25E1FBD4000E8CFD /* MessageViewController.swift in Sources */,
 				5F60F71525D809C9003D7147 /* UIColor-Extension.swift in Sources */,
 				5F735FC325DAC4E7000E8CFD /* AllquestionViewController.swift in Sources */,
 				5F33BF6C25D80091005689A9 /* SceneDelegate.swift in Sources */,
