@@ -7,8 +7,10 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
-
+class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
+    let TODO = ["牛乳を買う", "掃除をする", "アプリ開発の勉強をする"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,5 +32,23 @@ class TimelineViewController: UIViewController {
                 print("２回目以降の起動です")
             }
         }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return TODO.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+                cell.textLabel!.text = TODO[indexPath.row]
+        
+                return cell
+    }
+    
+
 
 }

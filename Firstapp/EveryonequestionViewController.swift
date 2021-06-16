@@ -51,7 +51,7 @@ class EveryonequestionViewController: UIViewController, UITextViewDelegate{
           if let err = err {
             print("Error adding document: \(err)")
           } else {
-            print("保存に成功しました！");
+            print("投稿に成功しました！");
     }
         }
     }

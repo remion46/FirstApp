@@ -18,6 +18,7 @@
 		5F33BF8C25D80096005689A9 /* FirstappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33BF8B25D80096005689A9 /* FirstappUITests.swift */; };
 		5F33BFA025D80412005689A9 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33BF9F25D80412005689A9 /* TitleViewController.swift */; };
 		5F33BFA525D805B3005689A9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F33BFA425D805B3005689A9 /* SignUpViewController.swift */; };
+		5F4F5D262678D660003936B8 /* ColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4F5D252678D660003936B8 /* ColumnViewController.swift */; };
 		5F60F71525D809C9003D7147 /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F60F71425D809C9003D7147 /* UIColor-Extension.swift */; };
 		5F735FB325D8FDF6000E8CFD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F735FB225D8FDF6000E8CFD /* GoogleService-Info.plist */; };
 		5F735FC325DAC4E7000E8CFD /* AllquestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F735FC225DAC4E7000E8CFD /* AllquestionViewController.swift */; };
@@ -68,6 +69,7 @@
 		5F33BF8D25D80096005689A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F33BF9F25D80412005689A9 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		5F33BFA425D805B3005689A9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5F4F5D252678D660003936B8 /* ColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnViewController.swift; sourceTree = "<group>"; };
 		5F60F71425D809C9003D7147 /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		5F735FB225D8FDF6000E8CFD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F735FC225DAC4E7000E8CFD /* AllquestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllquestionViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				5F33BF6925D80091005689A9 /* AppDelegate.swift */,
 				5F33BF6B25D80091005689A9 /* SceneDelegate.swift */,
 				5F33BF6F25D80091005689A9 /* Main.storyboard */,
+				5F4F5D252678D660003936B8 /* ColumnViewController.swift */,
 				5F73600925E1FBD3000E8CFD /* MessageViewController.swift */,
 				5F73603625E25036000E8CFD /* MockMessage.swift */,
 				5F735FE725DC142B000E8CFD /* TimelineViewController.swift */,
@@ -437,6 +440,7 @@
 				5F60F71525D809C9003D7147 /* UIColor-Extension.swift in Sources */,
 				5F735FC325DAC4E7000E8CFD /* AllquestionViewController.swift in Sources */,
 				5F33BF6C25D80091005689A9 /* SceneDelegate.swift in Sources */,
+				5F4F5D262678D660003936B8 /* ColumnViewController.swift in Sources */,
 				5F33BFA525D805B3005689A9 /* SignUpViewController.swift in Sources */,
 				5F735FE825DC142B000E8CFD /* TimelineViewController.swift in Sources */,
 				5F735FE325DB9B75000E8CFD /* EveryonequestionViewController.swift in Sources */,
