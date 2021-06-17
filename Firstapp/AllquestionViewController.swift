@@ -18,14 +18,11 @@ class AllquestionViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
         everyonequesion.layer.cornerRadius = 20
         everyonequesion.layer.borderColor = UIColor.black.cgColor
         
         onepersonquestion.layer.cornerRadius = 20
         onepersonquestion.layer.borderColor = UIColor.black.cgColor
-        
-        
         
         
     }

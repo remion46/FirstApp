@@ -45,7 +45,7 @@ class EveryonequestionViewController: UIViewController, UITextViewDelegate{
           "user_id": uuid ,
           "name": name ,
           "created_at": Date(),
-          "content": "質問"
+          "content": questionfield!
         ] as [String : Any]
         ref?.setData(submit_data){ err in
           if let err = err {
