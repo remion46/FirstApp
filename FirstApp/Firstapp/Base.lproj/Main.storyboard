@@ -241,13 +241,6 @@
                     <view key="view" contentMode="scaleToFill" id="XIh-k0-CQn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klX-48-fqZ">
-                                <rect key="frame" x="0.0" y="44" width="284" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NMc-NR-90O"/>
                         <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.5" colorSpace="calibratedRGB"/>
                     </view>
@@ -337,14 +330,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="質問内容" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-E9-yNm">
-                                <rect key="frame" x="0.0" y="106" width="414" height="580"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZL-vj-5yg">
                                 <rect key="frame" x="57" y="702" width="300" height="48"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -362,16 +347,25 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="post:" destination="KzB-PM-ZzP" eventType="touchUpInside" id="s1T-c2-BtN"/>
+                                    <segue destination="gSX-ui-hWE" kind="presentation" id="DJD-VT-YJT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="質問内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-lJ-liv">
-                                <rect key="frame" x="0.0" y="56" width="414" height="42"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="質問内容" translatesAutoresizingMaskIntoConstraints="NO" id="bYk-E9-yNm">
+                                <rect key="frame" x="0.0" y="133" width="414" height="580"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jQe-fn-oRg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -389,7 +383,7 @@
         <!--個別に質問-->
         <scene sceneID="QnL-46-Jzn">
             <objects>
-                <viewController id="gK0-9s-kTV" sceneMemberID="viewController">
+                <viewController id="gK0-9s-kTV" customClass="IndividualViewController" customModule="Firstapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rjV-gD-SFP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +397,7 @@
                                 <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="165" id="3H3-ix-Tw1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Individualviewcell" rowHeight="165" id="3H3-ix-Tw1">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="165"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3H3-ix-Tw1" id="7Wm-Tn-C87">
@@ -421,6 +415,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="個別に質問" id="Upa-mV-xFT"/>
+                    <connections>
+                        <outlet property="tableView" destination="m9A-Bs-NsN" id="hw2-a5-R17"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcS-bm-BdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -553,7 +550,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="9ty-3y-RcQ"/>
-        <segue reference="ERr-tc-sFc"/>
+        <segue reference="DJD-VT-YJT"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="opaqueSeparatorColor">
