@@ -29,6 +29,7 @@
 		5F73603725E25036000E8CFD /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F73603625E25036000E8CFD /* MockMessage.swift */; };
 		5F7A33A42686148000EB6C0B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A32686148000EB6C0B /* SettingViewController.swift */; };
 		5F7A33A6268618A700EB6C0B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A5268618A700EB6C0B /* AlertViewController.swift */; };
+		5F7A33A82688C54700EB6C0B /* ProfileeditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A72688C54600EB6C0B /* ProfileeditViewController.swift */; };
 		5F97075D26858C6700323ECB /* IndividualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97075C26858C6700323ECB /* IndividualViewController.swift */; };
 		99B37BC1A0345C37A8FD52CC /* Pods_FirstappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC1D0B2A71F11C9938A5FE7 /* Pods_FirstappTests.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		5F73603625E25036000E8CFD /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
 		5F7A33A32686148000EB6C0B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5F7A33A5268618A700EB6C0B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		5F7A33A72688C54600EB6C0B /* ProfileeditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileeditViewController.swift; sourceTree = "<group>"; };
 		5F97075C26858C6700323ECB /* IndividualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualViewController.swift; sourceTree = "<group>"; };
 		DF51BB5684F4B708AB03014C /* Pods-FirstappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstappTests.release.xcconfig"; path = "Target Support Files/Pods-FirstappTests/Pods-FirstappTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA828CD86E5886289733DC30 /* Pods_Firstapp_FirstappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firstapp_FirstappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +157,7 @@
 				5F73603625E25036000E8CFD /* MockMessage.swift */,
 				5F260CB6268222600023CE35 /* MypageViewController.swift */,
 				5F7A33A32686148000EB6C0B /* SettingViewController.swift */,
+				5F7A33A72688C54600EB6C0B /* ProfileeditViewController.swift */,
 				5F33BF9F25D80412005689A9 /* TitleViewController.swift */,
 				5F33BFA425D805B3005689A9 /* SignUpViewController.swift */,
 				5F60F71425D809C9003D7147 /* UIColor-Extension.swift */,
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7A33A82688C54700EB6C0B /* ProfileeditViewController.swift in Sources */,
 				5F33BF6A25D80091005689A9 /* AppDelegate.swift in Sources */,
 				5F73603725E25036000E8CFD /* MockMessage.swift in Sources */,
 				5F73600A25E1FBD4000E8CFD /* MessageViewController.swift in Sources */,

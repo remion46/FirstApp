@@ -9,12 +9,23 @@ import Firebase
 import FirebaseFirestore
 
 
-class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
+    
+    @IBOutlet weak var searchField: UISearchBar!
    
     var questionDataArray:[NSObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        searchField.delegate = self
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            view.endEditing(true)
+            if let word = searchBar.text {
+                print(word)
+            }
     }
     override func viewDidAppear(_ animated: Bool) {
             let defaults = UserDefaults.standard

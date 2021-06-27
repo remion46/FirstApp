@@ -25,6 +25,8 @@ struct Question {
     }
 }
 
+
+
 class EveryonequestionViewController: UIViewController, UITextViewDelegate{
     @IBOutlet weak var postbutton: UIButton!
     
