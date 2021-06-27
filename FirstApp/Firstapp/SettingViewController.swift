@@ -1,13 +1,13 @@
 //
-//  ColumnViewController.swift
+//  SettingViewController.swift
 //  Firstapp
 //
-//  Created by 船越廉 on 2021/06/15.
+//  Created by 船越廉 on 2021/06/25.
 //
 
 import UIKit
 
-class ColumnViewController: UIViewController {
+class SettingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -15,11 +15,11 @@ class ColumnViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        tableView.register(UINib(nibName: "columnviewcell", bundle: nil), forCellReuseIdentifier: "columnviewcell")
+        tableView.register(UINib(nibName: "settingviewcell", bundle: nil), forCellReuseIdentifier: "settingviewcell")
     }
 }
 
-extension ColumnViewController: UITableViewDataSource {
+extension SettingViewController: UITableViewDataSource {
 
     // セクションの個数を返す
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,7 +33,7 @@ extension ColumnViewController: UITableViewDataSource {
 
     // セルの中身を返す
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "columnviewcell")!
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "settingviewcell")!
         return cell
     }
 
@@ -43,7 +43,7 @@ extension ColumnViewController: UITableViewDataSource {
     }
 }
 
-extension ColumnViewController: UITableViewDelegate {
+extension SettingViewController: UITableViewDelegate {
 
     // セルがタップされたときの処理を書く
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
