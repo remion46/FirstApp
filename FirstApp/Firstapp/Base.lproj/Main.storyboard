@@ -741,6 +741,13 @@
                         <viewLayoutGuide key="safeArea" id="bdl-Uw-TUK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="Questioncontent" destination="kVk-KX-Gcb" id="F9M-Z8-B6V"/>
+                        <outlet property="Questiondate" destination="fJz-oK-rQg" id="BAX-Fd-VK0"/>
+                        <outlet property="Questionuserimageview" destination="1I9-TG-xcb" id="KWn-gx-bcU"/>
+                        <outlet property="Questionusername" destination="cyr-6n-0CB" id="qIB-aJ-aUz"/>
+                        <outlet property="tableview" destination="3Gw-zL-OiG" id="DgK-IR-kup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uua-U6-bgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -786,7 +793,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gbq-vM-cik"/>
+        <segue reference="9ty-3y-RcQ"/>
         <segue reference="Mj5-1a-yQ8"/>
     </inferredMetricsTieBreakers>
     <resources>

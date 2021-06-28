@@ -8,7 +8,17 @@
 import UIKit
 
 class QuestiondetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var Questionuserimageview: UIImageView!
+    
+    @IBOutlet weak var Questionusername: UILabel!
+    
+    @IBOutlet weak var Questiondate: UILabel!
+    
+    @IBOutlet weak var Questioncontent: UILabel!
+    
+    @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
