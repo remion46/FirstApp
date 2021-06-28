@@ -1,18 +1,14 @@
 //
-//  ProfileeditViewController.swift
+//  QuestiondetailsViewController.swift
 //  Firstapp
 //
-//  Created by 船越廉 on 2021/06/27.
+//  Created by 船越廉 on 2021/06/28.
 //
 
 import UIKit
 
-class ProfileeditViewController: UIViewController {
+class QuestiondetailsViewController: UIViewController {
 
-    @IBOutlet weak var nicknametextfield: UITextField!
-    @IBOutlet weak var mailadresstextfield: UITextField!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

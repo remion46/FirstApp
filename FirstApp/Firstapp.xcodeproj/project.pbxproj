@@ -30,6 +30,8 @@
 		5F7A33A42686148000EB6C0B /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A32686148000EB6C0B /* SettingViewController.swift */; };
 		5F7A33A6268618A700EB6C0B /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A5268618A700EB6C0B /* AlertViewController.swift */; };
 		5F7A33A82688C54700EB6C0B /* ProfileeditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A72688C54600EB6C0B /* ProfileeditViewController.swift */; };
+		5F7A33AA268999CD00EB6C0B /* FeedbackmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33A9268999CD00EB6C0B /* FeedbackmailViewController.swift */; };
+		5F7A33AC26899FCA00EB6C0B /* QuestiondetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7A33AB26899FCA00EB6C0B /* QuestiondetailsViewController.swift */; };
 		5F97075D26858C6700323ECB /* IndividualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F97075C26858C6700323ECB /* IndividualViewController.swift */; };
 		99B37BC1A0345C37A8FD52CC /* Pods_FirstappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC1D0B2A71F11C9938A5FE7 /* Pods_FirstappTests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		5F7A33A32686148000EB6C0B /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5F7A33A5268618A700EB6C0B /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		5F7A33A72688C54600EB6C0B /* ProfileeditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileeditViewController.swift; sourceTree = "<group>"; };
+		5F7A33A9268999CD00EB6C0B /* FeedbackmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackmailViewController.swift; sourceTree = "<group>"; };
+		5F7A33AB26899FCA00EB6C0B /* QuestiondetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestiondetailsViewController.swift; sourceTree = "<group>"; };
 		5F97075C26858C6700323ECB /* IndividualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualViewController.swift; sourceTree = "<group>"; };
 		DF51BB5684F4B708AB03014C /* Pods-FirstappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstappTests.release.xcconfig"; path = "Target Support Files/Pods-FirstappTests/Pods-FirstappTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA828CD86E5886289733DC30 /* Pods_Firstapp_FirstappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firstapp_FirstappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,7 @@
 				5F33BF6F25D80091005689A9 /* Main.storyboard */,
 				5F4F5D252678D660003936B8 /* ColumnViewController.swift */,
 				5F735FE725DC142B000E8CFD /* TimelineViewController.swift */,
+				5F7A33AB26899FCA00EB6C0B /* QuestiondetailsViewController.swift */,
 				5F735FE225DB9B75000E8CFD /* EveryonequestionViewController.swift */,
 				5F735FC225DAC4E7000E8CFD /* AllquestionViewController.swift */,
 				5F97075C26858C6700323ECB /* IndividualViewController.swift */,
@@ -158,6 +163,7 @@
 				5F260CB6268222600023CE35 /* MypageViewController.swift */,
 				5F7A33A32686148000EB6C0B /* SettingViewController.swift */,
 				5F7A33A72688C54600EB6C0B /* ProfileeditViewController.swift */,
+				5F7A33A9268999CD00EB6C0B /* FeedbackmailViewController.swift */,
 				5F33BF9F25D80412005689A9 /* TitleViewController.swift */,
 				5F33BFA425D805B3005689A9 /* SignUpViewController.swift */,
 				5F60F71425D809C9003D7147 /* UIColor-Extension.swift */,
@@ -449,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7A33AA268999CD00EB6C0B /* FeedbackmailViewController.swift in Sources */,
 				5F7A33A82688C54700EB6C0B /* ProfileeditViewController.swift in Sources */,
 				5F33BF6A25D80091005689A9 /* AppDelegate.swift in Sources */,
 				5F73603725E25036000E8CFD /* MockMessage.swift in Sources */,
@@ -457,6 +464,7 @@
 				5F60F71525D809C9003D7147 /* UIColor-Extension.swift in Sources */,
 				5F7A33A42686148000EB6C0B /* SettingViewController.swift in Sources */,
 				5F735FC325DAC4E7000E8CFD /* AllquestionViewController.swift in Sources */,
+				5F7A33AC26899FCA00EB6C0B /* QuestiondetailsViewController.swift in Sources */,
 				5F97075D26858C6700323ECB /* IndividualViewController.swift in Sources */,
 				5F33BF6C25D80091005689A9 /* SceneDelegate.swift in Sources */,
 				5F4F5D262678D660003936B8 /* ColumnViewController.swift in Sources */,
