@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JS5-40-6uu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="94r-Dd-oWu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -433,6 +433,36 @@
             </objects>
             <point key="canvasLocation" x="-94" y="-785"/>
         </scene>
+        <!--Column View Controller-->
+        <scene sceneID="Jkm-CW-jcJ">
+            <objects>
+                <viewController id="94r-Dd-oWu" customClass="ColumnViewController" customModule="Firstapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aqg-qv-REP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DN7-aX-DBW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Nz-6s-eek"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="afg-1p-fYC"/>
+                    <connections>
+                        <outlet property="webview" destination="DN7-aX-DBW" id="4ne-th-LTE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwX-6Q-k1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="590.625"/>
+        </scene>
         <!--Allquestion View Controller-->
         <scene sceneID="L50-29-gb9">
             <objects>
@@ -454,8 +484,13 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-2p-8VE">
                                         <rect key="frame" x="0.0" y="342.5" width="374" height="342.5"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="NO"/>
+                                        </accessibility>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="個別に質問"/>
+                                        <state key="normal" title="個別に質問">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <segue destination="gK0-9s-kTV" kind="show" id="aak-5g-i6n"/>
                                         </connections>
@@ -585,35 +620,6 @@
             </objects>
             <point key="canvasLocation" x="2740.579710144928" y="2207.8125"/>
         </scene>
-        <!--受験コラム-->
-        <scene sceneID="jzb-g6-sjC">
-            <objects>
-                <tableViewController id="ooZ-BI-kpZ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hAv-Ky-oW4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="columnviewcell" rowHeight="109" id="Xom-WV-884">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="109"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xom-WV-884" id="z7g-MT-eVH">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ooZ-BI-kpZ" id="5Ie-RB-Us8"/>
-                            <outlet property="delegate" destination="ooZ-BI-kpZ" id="qOe-Wa-CeC"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="受験コラム" id="tIO-li-B3t"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tvo-9S-cH2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="800.00000000000011" y="590.625"/>
-        </scene>
         <!--記事-->
         <scene sceneID="M2w-Lq-Vwf">
             <objects>
@@ -624,7 +630,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ooZ-BI-kpZ" kind="relationship" relationship="rootViewController" id="hra-7p-wfm"/>
+                        <segue destination="94r-Dd-oWu" kind="relationship" relationship="rootViewController" id="uDQ-aK-a2D"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQj-ls-JT4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -793,7 +799,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9ty-3y-RcQ"/>
+        <segue reference="6vV-cy-95p"/>
         <segue reference="Mj5-1a-yQ8"/>
     </inferredMetricsTieBreakers>
     <resources>
